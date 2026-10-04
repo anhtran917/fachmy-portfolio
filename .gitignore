@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/.codex-preview/
 
 # next.js
 /.next/
@@ -43,3 +44,6 @@ yarn-error.log*
 next-env.d.ts
 node_modules
 node_modules
+/dist/
+.vinext/
+.cloudflare/
