@@ -3,6 +3,7 @@ import "./globals.css";
 import TrackVisit from "@/components/TrackVisit";
 import { Analytics } from "@vercel/analytics/next";
 import NewsletterPopup from "@/components/NewsletterPopup";
+import { PROGRAMMING_LANGUAGES } from "@/data/programmingLanguages";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const playfair = Playfair_Display({
@@ -96,6 +97,7 @@ const legacyJsonLd = {
       "jobTitle": "Creative Developer",
       "description": "Creative developer building cinematic digital experiences at the intersection of design and code. Specialising in Next.js, GSAP, Three.js, and WebGL.",
       "knowsAbout": [
+        ...PROGRAMMING_LANGUAGES,
         "Next.js", "React", "GSAP", "Three.js", "WebGL", "Tailwind CSS",
         "JavaScript", "TypeScript", "Node.js", "Flutter", "Shopify",
         "Video Editing", "Motion Graphics", "UI/UX Design", "Figma",
@@ -355,7 +357,7 @@ const jsonLd = {
   address: { "@type": "PostalAddress", addressLocality: "Bandung", addressCountry: "ID" },
   sameAs: ["https://www.linkedin.com/in/fachmy-kabila"],
   alumniOf: { "@type": "CollegeOrUniversity", name: "Telkom University" },
-  knowsAbout: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "C#", ".NET", "ASP.NET Core", "REST APIs", "SQL", "AWS", "Linode", "Flutter", "Kotlin", "Automated Testing", "CI/CD"],
+  knowsAbout: [...PROGRAMMING_LANGUAGES, "React", "Next.js", "Tailwind CSS", ".NET", "ASP.NET Core", "REST APIs", "AWS", "Linode", "Flutter", "Automated Testing", "CI/CD"],
   description: "Full Stack Engineer with six years of experience building production web applications, dashboards, backend services, REST APIs, and data-heavy workflows.",
 };
 

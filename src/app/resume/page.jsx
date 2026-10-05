@@ -1,5 +1,6 @@
 import PageShell from "@/components/PageShell";
 import Footer from "@/components/Footer";
+import { PROGRAMMING_LANGUAGES } from "@/data/programmingLanguages";
 
 export const metadata = {
   title: "Resume | Fachmy Faiz Bentra Kabila — Full Stack Engineer",
@@ -14,6 +15,7 @@ const experience = [
 ];
 
 const skillGroups = [
+  ["Programming Languages", PROGRAMMING_LANGUAGES],
   ["Frontend", ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Responsive UI", "Accessibility", "State Management"]],
   ["Backend", ["C#", ".NET", "ASP.NET Core", "REST APIs", "Business Logic", "Integrations", "Authentication", "API Security"]],
   ["Data & Cloud", ["SQL", "Data Modeling", "Stored Procedures", "Query Optimization", "AWS", "Linode", "Observability", "Logging"]],

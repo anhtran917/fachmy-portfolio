@@ -2,8 +2,9 @@
 //  ABOUT SECTION — edit everything here
 // ─────────────────────────────────────────────
 
-import { SiReact, SiNextdotjs, SiJavascript, SiTailwindcss, SiFlutter, SiHtml5, SiCss, SiTypescript, SiKotlin, SiGit, SiNodedotjs, SiMysql, SiPostman, SiGithub, SiGitlab, SiBitbucket } from "react-icons/si";
-import { TbSql, TbBrandCSharp, TbCloud, TbApi, TbTestPipe, TbDatabase } from "react-icons/tb";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiFlutter, SiHtml5, SiCss, SiGit, SiNodedotjs, SiMysql, SiPostman, SiGithub, SiGitlab, SiBitbucket } from "react-icons/si";
+import { TbCloud, TbApi, TbTestPipe, TbDatabase, TbCode } from "react-icons/tb";
+import { PROGRAMMING_LANGUAGES } from "@/data/programmingLanguages";
 
 export const SECTION = {
   label: "About Me",
@@ -26,21 +27,17 @@ export const BIO = [
 export const RESUME_URL = "/resume";
 
 export const TECH = [
+  ...PROGRAMMING_LANGUAGES.map((name) => ({ name, icon: TbCode })),
   { name: "React",          icon: SiReact },
   { name: "Next.js",        icon: SiNextdotjs },
-  { name: "JavaScript",     icon: SiJavascript },
-  { name: "TypeScript",     icon: SiTypescript },
   { name: "HTML5",          icon: SiHtml5 },
   { name: "CSS3",           icon: SiCss },
   { name: "Tailwind CSS",   icon: SiTailwindcss },
-  { name: "C#",             icon: TbBrandCSharp },
   { name: ".NET",           icon: TbApi },
   { name: "ASP.NET Core",   icon: TbApi },
   { name: "REST APIs",      icon: TbApi },
   { name: "Node.js",        icon: SiNodedotjs },
   { name: "Flutter",        icon: SiFlutter },
-  { name: "Kotlin",         icon: SiKotlin },
-  { name: "SQL",            icon: TbSql },
   { name: "MySQL",          icon: SiMysql },
   { name: "Data Modeling",  icon: TbDatabase },
   { name: "Git",            icon: SiGit },

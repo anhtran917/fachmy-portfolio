@@ -53,6 +53,12 @@ Sarang is a multi-disciplinary creative developer who combines web development, 
 
 ## Complete Technical Stack
 
+### Programming Languages
+- JavaScript, TypeScript, Python, Java, C#, C++, C, PHP, Go, Rust
+- Ruby, Swift, Kotlin, Dart, SQL, Scala, R, Perl, Lua, Objective-C
+- F#, Elixir, Erlang, Clojure, Groovy, Bash, PowerShell, Solidity
+- Julia, MATLAB, COBOL, Fortran, Haskell, OCaml, Pascal, VBA
+
 ### Frontend
 - React 19, Next.js (App Router)
 - JavaScript (ES2024+), TypeScript

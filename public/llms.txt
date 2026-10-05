@@ -27,6 +27,9 @@ Cross-platform mobile applications for iOS and Android using Flutter and Dart.
 
 ## Technical Skills
 
+### Programming Languages
+JavaScript, TypeScript, Python, Java, C#, C++, C, PHP, Go, Rust, Ruby, Swift, Kotlin, Dart, SQL, Scala, R, Perl, Lua, Objective-C, F#, Elixir, Erlang, Clojure, Groovy, Bash, PowerShell, Solidity, Julia, MATLAB, COBOL, Fortran, Haskell, OCaml, Pascal, VBA
+
 ### Web Development
 React, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Node.js, Express, GSAP, Three.js, WebGL
 

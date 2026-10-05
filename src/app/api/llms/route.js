@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { PROGRAMMING_LANGUAGES } from "@/data/programmingLanguages";
 
 /**
  * GET /api/llms
@@ -47,6 +48,7 @@ export async function GET() {
     ],
 
     skills: {
+      programming_languages: PROGRAMMING_LANGUAGES,
       frontend: ["React", "Next.js", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "GSAP", "Three.js", "WebGL"],
       backend: ["Node.js", "Express", "Python", "PHP", "Go", "Rust"],
       mobile: ["Flutter", "Dart", "Swift", "Kotlin"],

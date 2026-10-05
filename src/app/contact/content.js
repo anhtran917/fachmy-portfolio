@@ -3,19 +3,19 @@
 // ─────────────────────────────────────────────
 
 import {
-  SiReact, SiNextdotjs, SiJavascript, SiTailwindcss,
-  SiFlutter, SiShopify, SiPython, SiCplusplus,
+  SiReact, SiNextdotjs, SiTailwindcss,
+  SiFlutter, SiShopify,
   SiDavinciresolve, SiFigma,
-  SiHtml5, SiCss, SiTypescript, SiPhp, SiGo, SiRust, SiSwift, SiKotlin,
+  SiHtml5, SiCss,
   SiGit, SiDocker, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiMysql, SiRedis,
   SiVercel, SiNetlify, SiPostman,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 import {
-  TbCut, TbSql, TbPhoto,
+  TbCut, TbPhoto, TbCode,
   TbBrandAdobeAfterEffect, TbBrandAdobePremier,
   TbBrandAdobePhotoshop, TbBrandAdobeIllustrator,
 } from "react-icons/tb";
+import { PROGRAMMING_LANGUAGES } from "@/data/programmingLanguages";
 
 export const SECTION = {
   label: "Get In Touch",
@@ -48,10 +48,9 @@ export const COUNTRIES = [
 ];
 
 export const TECH = [
+  ...PROGRAMMING_LANGUAGES.map((name) => ({ name, icon: TbCode })),
   { name: "React",          icon: SiReact },
   { name: "Next.js",        icon: SiNextdotjs },
-  { name: "JavaScript",     icon: SiJavascript },
-  { name: "TypeScript",     icon: SiTypescript },
   { name: "HTML5",          icon: SiHtml5 },
   { name: "CSS3",           icon: SiCss },
   { name: "Tailwind CSS",   icon: SiTailwindcss },
@@ -59,15 +58,6 @@ export const TECH = [
   { name: "Express",        icon: SiExpress },
   { name: "Flutter",        icon: SiFlutter },
   { name: "Shopify Liquid", icon: SiShopify },
-  { name: "Python",         icon: SiPython },
-  { name: "Java",           icon: FaJava },
-  { name: "C++",            icon: SiCplusplus },
-  { name: "PHP",            icon: SiPhp },
-  { name: "Go",             icon: SiGo },
-  { name: "Rust",           icon: SiRust },
-  { name: "Swift",          icon: SiSwift },
-  { name: "Kotlin",         icon: SiKotlin },
-  { name: "SQL",            icon: TbSql },
   { name: "MongoDB",        icon: SiMongodb },
   { name: "PostgreSQL",     icon: SiPostgresql },
   { name: "MySQL",          icon: SiMysql },
