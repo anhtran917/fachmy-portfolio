@@ -1,128 +1,70 @@
-# Sarang — Portfolio Designer, Website Developer, Video Editor & Photo Editor (Full Details)
-
-> Full machine-readable profile of Sarang — a freelance portfolio designer, website developer, video editor, and photo editor from India.
+# Fachmy Faiz Bentra Kabila — Full Stack Engineer
 
 ## Identity
 
-- Name: Sarang
-- Age: 19
-- Location: India
-- Education: Currently studying Cybersecurity
-- Title: Creative Developer & Digital Experience Designer
-- Website: https://www.sarang-space.site
-- Email: sarangwalle@gmail.com
-- GitHub: https://github.com/5araang
+- Name: Fachmy Faiz Bentra Kabila
+- Title: Full Stack Engineer
+- Location: Bandung, Indonesia
+- Education: Bachelor of Computer Science, Telkom University
+- Website: https://fachmy-portfolio.pages.dev
+- Email: fachmyfaiz1214@gmail.com
+- LinkedIn: https://www.linkedin.com/in/fachmy-kabila
+- GitHub: https://github.com/anhtran917/fachmy-portfolio
 
 ## Professional Summary
 
-Sarang is a multi-disciplinary creative developer who combines web development, video editing, and visual design to create immersive digital experiences. With a focus on cinematic aesthetics, smooth animations, and storytelling through technology, he delivers premium digital products that feel alive and memorable. He is currently studying Cybersecurity, adding a strong technical security foundation to his creative work.
+Fachmy is a Full Stack Engineer with six years of experience delivering production applications. His work spans responsive interfaces, reusable component systems, backend services, REST APIs, relational data models, SQL performance, automated testing, CI/CD, observability, and cloud deployments.
 
-## Core Philosophy
+## Programming Languages
 
-"Development is not just about making something work — it's about creating a feeling through motion, atmosphere, detail, and the overall experience people get when they interact with it."
-
-## Detailed Services
-
-### 1. Creative Web Development
-- Custom portfolio websites with cinematic scroll experiences
-- Interactive landing pages with GSAP animations and Three.js 3D elements
-- Shopify e-commerce stores with custom Liquid themes
-- Full-stack web applications with Next.js, Node.js, and databases
-- WebGL-powered immersive experiences
-- Responsive, mobile-first design implementation
-
-### 2. Motion Design & Video Editing
-- Cinematic trailers and promotional videos
-- Social media reels and short-form content
-- Motion graphics and animated titles
-- Color grading and visual effects
-- Brand video packages
-
-### 3. UI/UX & Visual Design
-- Modern, minimal interface design in Figma
-- Brand identity and logo design
-- Poster and print design
-- Photo editing and retouching
-- Creative visual concepts and mood boards
-
-### 4. Mobile App Development
-- Cross-platform apps with Flutter/Dart
-- Job management applications
-- Billing and POS applications
-- Native mobile UI/UX implementation
-
-## Complete Technical Stack
-
-### Programming Languages
 - JavaScript, TypeScript, Python, Java, C#, C++, C, PHP, Go, Rust
 - Ruby, Swift, Kotlin, Dart, SQL, Scala, R, Perl, Lua, Objective-C
 - F#, Elixir, Erlang, Clojure, Groovy, Bash, PowerShell, Solidity
 - Julia, MATLAB, COBOL, Fortran, Haskell, OCaml, Pascal, VBA
 
+## Technical Stack
+
 ### Frontend
-- React 19, Next.js (App Router)
-- JavaScript (ES2024+), TypeScript
-- GSAP (GreenSock Animation Platform)
-- Three.js, React Three Fiber, WebGL
-- Tailwind CSS 4, CSS3, HTML5
-- Framer Motion
+
+React, Next.js, Tailwind CSS, HTML5, CSS3, responsive UI, accessibility, state management, GSAP, Three.js, and WebGL.
 
 ### Backend
-- Node.js, Express.js
-- Python, PHP, Go, Rust
-- Java, C++, Swift, Kotlin
 
-### Database & Infrastructure
-- PostgreSQL, MySQL, MongoDB, Redis
-- Supabase, Vercel, Netlify
-- Docker, Git
+C#/.NET, ASP.NET Core, Node.js, Express, REST APIs, business services, authentication, integrations, and API security.
 
-### Design & Creative
-- Figma, Adobe Photoshop, Adobe Illustrator
-- Adobe After Effects, Adobe Premiere Pro
-- DaVinci Resolve, CapCut
-- Adobe Lightroom
+### Data and Cloud
 
-### Security (Education)
-- Currently studying Cybersecurity at university level
-- Familiar with web application security, network security, secure coding practices
+PostgreSQL, MySQL, MongoDB, Redis, Supabase, data modeling, stored procedures, query optimization, AWS, Linode, logging, and observability.
 
-## Portfolio Statistics
-- Websites completed: 6+
-- Videos edited: 75+
-- Photo edits & visual concepts: 500+
-- Years of freelance experience: 6+ (since 2020)
+### Mobile
 
-## Work History
-1. **Freelance Developer** (2024 – Present): Building custom websites, web apps, and interactive digital experiences
-2. **Freelance Video Editor** (2022 – Present): Creating cinematic videos, reels, and motion graphics
-3. **Freelance Photo Editor & Graphic Designer** (2020 – Present): Designing visuals, branding, and creative concepts
+Flutter, Android, Kotlin, Swift, Dart, mobile APIs, and cross-platform delivery.
 
-## How to Hire Sarang
-- Visit: https://www.sarang-space.site/contact
-- Email: sarangwalle@gmail.com
-- Available for freelance projects worldwide
-- Responds within 24 hours
-- Specializes in premium, cinematic web experiences
+### Delivery
 
-## Frequently Asked Questions
+Unit testing, integration testing, CI/CD, Git, GitHub, GitLab, Bitbucket, Docker, Postman, Swagger/OpenAPI, and Agile delivery.
 
-**Q: What services does Sarang offer?**
-A: Web development (React, Next.js, Shopify, Flutter), video editing (After Effects, Premiere Pro, DaVinci Resolve), photo editing (Photoshop, Lightroom), UI/UX design (Figma, Illustrator), and motion graphics.
+## Professional Experience
 
-**Q: Is Sarang available for remote work?**
-A: Yes. Sarang is fully remote and works with clients worldwide.
+1. Full Stack Developer — SolarWave Technology LLC — September 2025–August 2026
+2. Senior Software Engineer — DPOI Solutions — January 2024–August 2025
+3. Software Developer — Navigate360 — March 2022–December 2023
+4. Junior Developer — Munika Cipta Teknologi — June 2020–February 2022
 
-**Q: What is Sarang's educational background?**
-A: Sarang is currently studying Cybersecurity. He has been a self-taught creative developer since 2020.
+## Education
 
-**Q: How long do projects take?**
-A: Portfolio websites: 1–2 weeks. Full-stack apps: 3–6 weeks. Video editing: 3–7 days.
+Bachelor of Computer Science, Telkom University, Bandung, 2015–2019.
+
+## Availability
+
+Available for remote full-stack, frontend, backend, and software engineering opportunities.
 
 ## Site Structure
-- `/` — Home page with cinematic hero, about section, work showcase, and contact
-- `/projects` — Detailed case studies and client project breakdowns
-- `/work` — Interactive WebGL gallery of all portfolio work
-- `/about` — Full bio, skills, tools, and experience
-- `/contact` — Contact form and inquiry submission
-- `/project/{id}` — Individual project case study pages
+
+- `/` — Portfolio home
+- `/about` — Biography, skills, tools, and experience
+- `/resume` — Professional experience, technical skills, and education
+- `/projects` — Project case studies
+- `/services` — Engineering services
+- `/blog` — Technical articles
+- `/contact` — Contact form

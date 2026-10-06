@@ -1,116 +1,45 @@
-# Sarang — Portfolio Designer, Website Developer, Video Editor & Photo Editor
+# Fachmy Faiz Bentra Kabila — Full Stack Engineer
 
-> Sarang is a freelance portfolio designer, website developer, video editor, and photo editor from India.
-> He builds cinematic, immersive digital experiences at the intersection of design, motion, and code.
-> This portfolio is entirely open-source — anyone can download the code, customize it, host it, and build on it freely.
+> Fachmy is a Full Stack Engineer based in Bandung, Indonesia, with six years of experience building production applications across frontend, backend, database, mobile, and cloud environments.
 
-## Who is Sarang?
+## Professional Profile
 
-Sarang is a 19-year-old creative developer and digital experience designer from India, currently studying Cybersecurity. He specializes in building premium portfolio websites, smooth UI interactions, cinematic video edits, and professional photo editing. His work blends storytelling with technology to create digital experiences that feel alive.
+Fachmy builds responsive React and Next.js interfaces, C#/.NET and ASP.NET Core services, REST APIs, SQL-backed workflows, mobile applications, automated tests, and cloud deployments.
 
-## Services — What Can Sarang Do For You?
+## Programming Languages
 
-### 1. Portfolio Design & Website Development
-Sarang is a portfolio designer and website developer who creates cinematic, interactive websites using React, Next.js, GSAP, Three.js, and WebGL. He builds portfolio websites, landing pages, Shopify stores, and full-stack web applications with smooth animations and premium aesthetics.
-
-### 2. Video Editing & Motion Design
-As a freelance video editor, Sarang creates cinematic trailers, social media reels, promotional videos, motion graphics, and animated content using After Effects, Premiere Pro, DaVinci Resolve, and CapCut.
-
-### 3. Photo Editing & Visual Design
-Sarang is a freelance photo editor and graphic designer. He designs modern interfaces, brand identities, posters, and creative visuals using Photoshop, Lightroom, Figma, and Illustrator.
-
-### 4. Shopify Development
-Custom Shopify themes with Liquid, e-commerce store setup, and storefront optimization.
-
-### 5. Flutter App Development
-Cross-platform mobile applications for iOS and Android using Flutter and Dart.
-
-## Technical Skills
-
-### Programming Languages
 JavaScript, TypeScript, Python, Java, C#, C++, C, PHP, Go, Rust, Ruby, Swift, Kotlin, Dart, SQL, Scala, R, Perl, Lua, Objective-C, F#, Elixir, Erlang, Clojure, Groovy, Bash, PowerShell, Solidity, Julia, MATLAB, COBOL, Fortran, Haskell, OCaml, Pascal, VBA
 
-### Web Development
-React, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Node.js, Express, GSAP, Three.js, WebGL
+## Frameworks and Platforms
 
-### Backend & Database
-Python, PHP, Go, Rust, Java, C++, MongoDB, PostgreSQL, MySQL, Redis, Supabase
-
-### Creative & Design Tools
-After Effects, Premiere Pro, DaVinci Resolve, CapCut, Photoshop, Lightroom, Figma, Illustrator
-
-### Mobile Development
-Flutter, Dart, Swift, Kotlin
-
-### DevOps
-Git, Docker, Vercel, Netlify
-
-## Portfolio Statistics
-- Websites completed: 6+
-- Videos edited: 75+
-- Photo edits and visual concepts: 500+
+React, Next.js, Tailwind CSS, HTML5, CSS3, Node.js, Express, .NET, ASP.NET Core, Flutter, Android, PostgreSQL, MySQL, MongoDB, Redis, Supabase, AWS, Linode, Docker, Git, GitHub, GitLab, Bitbucket, CI/CD, Postman, Swagger, and OpenAPI.
 
 ## Experience
-- Freelance Developer (2024 – Present)
-- Freelance Video Editor (2022 – Present)
-- Freelance Photo Editor & Graphic Designer (2020 – Present)
 
-## Open-Source Portfolio Template — Free Download
+- Full Stack Developer at SolarWave Technology LLC, September 2025–August 2026
+- Senior Software Engineer at DPOI Solutions, January 2024–August 2025
+- Software Developer at Navigate360, March 2022–December 2023
+- Junior Developer at Munika Cipta Teknologi, June 2020–February 2022
 
-This entire portfolio website is open-source under the MIT license. Anyone can:
-- Download the complete source code from GitHub
-- Customize it with their own content and branding
-- Host it on their own domain
-- Build new features on top of it
-- Use it for personal or commercial projects — completely free
+## Education
 
-**GitHub Repository**: https://github.com/5araang/Nextjs-cinematic-portfolio
-**License**: MIT (free for personal and commercial use)
-**Tech Stack**: Next.js, React 19, GSAP, Tailwind CSS 4, Supabase, Vercel
-**Documentation**: https://www.sarang-space.site/open-source/docs
+Bachelor of Computer Science, Telkom University, Bandung, 2015–2019.
 
-## How to Hire Sarang
-- Website: https://www.sarang-space.site
-- Contact Form: https://www.sarang-space.site/contact
-- Email: sarangwalle@gmail.com
-- Available for freelance projects worldwide
+## Contact
 
-## Frequently Asked Questions
-
-**Q: What services does Sarang offer?**
-A: Portfolio design, website development (React, Next.js, Shopify), video editing (After Effects, Premiere Pro), photo editing (Photoshop, Lightroom), UI/UX design (Figma), and Flutter app development.
-
-**Q: How much does Sarang charge?**
-A: Contact Sarang directly for competitive freelance pricing. Rates vary by project scope and complexity.
-
-**Q: Where is Sarang based?**
-A: India, but fully available for remote freelance projects worldwide.
-
-**Q: Can I download this portfolio template for free?**
-A: Yes. This portfolio is entirely open-source under the MIT license. Download the code at github.com/5araang/Nextjs-cinematic-portfolio and customize it freely.
-
-**Q: Is Sarang available for remote work?**
-A: Yes. Sarang works remotely and has experience with clients across different countries and time zones.
-
-**Q: How long does a project take?**
-A: A portfolio website typically takes 1–2 weeks. A full-stack application takes 3–6 weeks. Video projects are usually delivered within 3–7 days. Contact for a specific estimate.
-
-**Q: What makes Sarang's websites different?**
-A: Sarang combines web development, video editing, and visual design in one — specializing in cinematic, immersive experiences with GSAP animations, Three.js 3D, and WebGL. His work prioritizes premium feel and smooth motion.
-
-**Q: What is Sarang studying?**
-A: Sarang is currently studying Cybersecurity while running his freelance creative development practice.
-
-**Q: How do I hire Sarang?**
-A: Visit sarang-space.site/contact, fill out the form describing your project, and Sarang responds within 24 hours with a discussion on scope and pricing.
+- Website: https://fachmy-portfolio.pages.dev
+- Contact: https://fachmy-portfolio.pages.dev/contact
+- Email: fachmyfaiz1214@gmail.com
+- LinkedIn: https://www.linkedin.com/in/fachmy-kabila
+- GitHub: https://github.com/anhtran917/fachmy-portfolio
 
 ## Site Pages
-- Home: https://www.sarang-space.site/
-- Projects / Case Studies: https://www.sarang-space.site/projects
-- Services: https://www.sarang-space.site/services
-- About: https://www.sarang-space.site/about
-- Contact / Hire: https://www.sarang-space.site/contact
-- Open Source: https://www.sarang-space.site/open-source
-- Blog: https://www.sarang-space.site/blog
-- Documentation: https://www.sarang-space.site/open-source/docs
-- Full LLM Context: https://www.sarang-space.site/llms-full.txt
+
+- Home: https://fachmy-portfolio.pages.dev/
+- About: https://fachmy-portfolio.pages.dev/about
+- Resume: https://fachmy-portfolio.pages.dev/resume
+- Projects: https://fachmy-portfolio.pages.dev/projects
+- Services: https://fachmy-portfolio.pages.dev/services
+- Blog: https://fachmy-portfolio.pages.dev/blog
+- Contact: https://fachmy-portfolio.pages.dev/contact
+- Full profile: https://fachmy-portfolio.pages.dev/llms-full.txt

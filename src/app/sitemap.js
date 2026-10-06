@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
-const BASE = "https://www.sarang-space.site";
+const BASE = "https://fachmy-portfolio.pages.dev";
 
 export default async function sitemap() {
   const staticPages = [

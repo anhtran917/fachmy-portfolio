@@ -29,6 +29,6 @@ export default function robots() {
       { userAgent: "iaskspider",    allow: "/" },
       { userAgent: "YouBot",        allow: "/" },
     ],
-    sitemap: "https://www.sarang-space.site/sitemap.xml",
+    sitemap: "https://fachmy-portfolio.pages.dev/sitemap.xml",
   };
 }

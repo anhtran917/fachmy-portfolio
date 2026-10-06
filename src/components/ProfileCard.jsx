@@ -28,9 +28,9 @@ const ProfileCardComponent = ({
   enableMobileTilt = false,
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
-  name = 'Sarang',
-  title = 'Creative Developer & Designer',
-  handle = 'sarang',
+  name = 'Fachmy Kabila',
+  title = 'Full Stack Engineer',
+  handle = 'fachmy-kabila',
   status = 'Available for Hire',
   contactText = 'Hire Me',
   showUserInfo = true,
@@ -294,7 +294,7 @@ const ProfileCardComponent = ({
       '--icon': iconUrl ? `url(${iconUrl})` : 'none',
       '--grain': grainUrl ? `url(${grainUrl})` : 'none',
       '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT,
-      '--behind-glow-color': behindGlowColor ?? 'rgba(255, 107, 26, 0.4)', // Use Sarang's brand orange color as backing glow!
+      '--behind-glow-color': behindGlowColor ?? 'rgba(255, 107, 26, 0.4)', // Brand orange backing glow.
       '--behind-glow-size': behindGlowSize ?? '50%'
     }),
     [iconUrl, grainUrl, innerGradient, behindGlowColor, behindGlowSize]

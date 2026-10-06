@@ -4,13 +4,13 @@ import Navbar from "../../components/Navbar";
 import ProjectsPage from "../../views/projects";
 
 export const metadata = {
-  title:       "Projects — Case Studies & Client Work by Sarang",
-  description: "Explore detailed case studies of Sarang's freelance projects — website development, video editing, and design work with client testimonials and tech breakdowns.",
+  title:       "Projects — Case Studies & Client Work by Fachmy",
+  description: "Explore detailed case studies of Fachmy's full-stack engineering projects with technical breakdowns.",
   keywords:    ["portfolio projects", "case studies", "freelance work", "client projects"],
-  alternates:  { canonical: "https://www.sarang-space.site/projects" },
+  alternates:  { canonical: "https://fachmy-portfolio.pages.dev/projects" },
   openGraph: {
-    title: "Projects — Sarang | Case Studies & Client Work",
-    description: "Detailed case studies of web development, video editing, and design projects by Sarang.",
+    title: "Projects — Fachmy | Case Studies & Client Work",
+    description: "Detailed case studies of full-stack engineering projects by Fachmy.",
   },
 };
 

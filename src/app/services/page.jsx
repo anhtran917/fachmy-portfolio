@@ -4,9 +4,9 @@ import { FinalCTA } from "@/components/HomeSections";
 import ServicesCatalog from "@/components/ServicesCatalog";
 
 export const metadata = {
-  title: "Services & Free Tools — QR Code Studio, PDF Suite & Web Engineering | Sarang",
+  title: "Services & Free Tools — QR Code Studio, PDF Suite & Web Engineering | Fachmy",
   description: "Free browser-powered creator utilities and custom Shopify, Next.js, UI/UX, and interactive development services.",
-  alternates: { canonical: "https://www.sarang-space.site/services" },
+  alternates: { canonical: "https://fachmy-portfolio.pages.dev/services" },
 };
 
 export default function ServicesPage() {

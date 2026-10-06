@@ -1,6 +1,6 @@
-# ⚙️ Sarang — Installation & Configuration Manual
+# ⚙️ Fachmy — Installation & Configuration Manual
 
-This guide walks you through setting up **Sarang** locally, configuring your environment variables, and initializing your Supabase database.
+This guide walks you through setting up **Fachmy** locally, configuring your environment variables, and initializing your Supabase database.
 
 ---
 
@@ -15,11 +15,11 @@ Make sure you have the following installed on your machine:
 
 ## 🚀 Local Installation
 
-Follow these steps to run Sarang on your local machine:
+Follow these steps to run Fachmy on your local machine:
 
 ```bash
 # 1. Clone the project repository
-git clone https://github.com/Saarangggg/nextjs-cinematic-portfolio.git
+git clone https://github.com/anhtran917/fachmy-portfolio.git
 cd nextjs-cinematic-portfolio
 
 # 2. Install dependencies
@@ -43,7 +43,7 @@ Open **`http://localhost:3000`** in your browser to inspect the application.
 
 ## 🗄️ Database Setup (Supabase)
 
-Sarang utilizes a relational PostgreSQL database on Supabase. To initialize the tables:
+Fachmy utilizes a relational PostgreSQL database on Supabase. To initialize the tables:
 
 1. Log into your [Supabase Dashboard](https://app.supabase.com/) and create a new project.
 2. Select your project, click on **SQL Editor** on the left menu, and click **New Query**.

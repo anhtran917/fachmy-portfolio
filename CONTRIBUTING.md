@@ -1,6 +1,6 @@
-# 🤝 Contributing to Sarang
+# 🤝 Contributing to Fachmy
 
-First off, thank you for considering contributing to **Sarang — Open Source Cinematic Developer Portfolio**! It is contributions like yours that make the open-source developer community such an amazing place to learn, inspire, and create.
+First off, thank you for considering contributing to **Fachmy — Open Source Cinematic Developer Portfolio**! It is contributions like yours that make the open-source developer community such an amazing place to learn, inspire, and create.
 
 ---
 
@@ -15,7 +15,7 @@ By participating in this project, you agree to maintain a respectful, welcoming,
 ### 1. Fork & Clone the Repository
 ```bash
 # Fork the repository on GitHub, then clone your fork:
-git clone https://github.com/5araang/nextjs-cinematic-portfolio.git
+git clone https://github.com/anhtran917/fachmy-portfolio.git
 cd nextjs-cinematic-portfolio
 ```
 
@@ -61,4 +61,4 @@ git push origin feature/your-feature-name
 
 ## ❓ Questions or Bugs?
 
-If you find a bug or have a suggestion, please [open an issue](https://github.com/5araang/nextjs-cinematic-portfolio/issues).
+If you find a bug or have a suggestion, please [open an issue](https://github.com/anhtran917/fachmy-portfolio/issues).
