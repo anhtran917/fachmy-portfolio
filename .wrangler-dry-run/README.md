@@ -1,0 +1,1 @@
+This folder contains the built output assets for the worker "fachmy-portfolio" generated at 2026-10-05T14:14:49.679Z.
