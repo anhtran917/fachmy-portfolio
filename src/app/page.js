@@ -19,35 +19,48 @@ import SeoContent from "../components/SeoContent";
 import { TrustedBy, Services, WhyChooseMe, Process, Testimonials, FAQ, FinalCTA } from "../components/HomeSections";
 
 export default function Home() {
-  const blurWrapRef = useRef(null);
   const footerRef   = useRef(null);
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const usesTouch = window.matchMedia("(pointer: coarse)").matches;
+    const bottomBlur = document.getElementById("site-bottom-blur");
+
+    const blurTween = bottomBlur && footerRef.current
+      ? gsap.fromTo(bottomBlur, { opacity: 1 }, {
+          opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+          },
+        })
+      : null;
+
+    if (prefersReducedMotion || usesTouch) {
+      ScrollTrigger.refresh();
+      return () => blurTween?.revert();
+    }
+
     const lenis = new Lenis({
-      lerp: 0.1, // More responsive, less lag
+      lerp: 0.16,
       smoothWheel: true,
-      wheelMultiplier: 1, // Normal scroll speed
+      wheelMultiplier: 1,
     });
 
-    lenis.on("scroll", () => {
-      ScrollTrigger.update();
-      if (blurWrapRef.current && footerRef.current) {
-        const footerTop = footerRef.current.getBoundingClientRect().top;
-        const vh = window.innerHeight;
-        // opacity = 1 while footer is below viewport, fades as footer enters
-        const opacity = footerTop >= vh ? 1 : Math.max(0, footerTop / vh);
-        blurWrapRef.current.style.opacity = opacity;
-      }
-
-    });
+    const onScroll = () => ScrollTrigger.update();
+    lenis.on("scroll", onScroll);
 
     const tick = (time) => { lenis.raf(time * 1000); };
     gsap.ticker.add(tick);
-    gsap.ticker.lagSmoothing(0);
 
     return () => {
-      lenis.destroy();
+      lenis.off("scroll", onScroll);
       gsap.ticker.remove(tick);
+      lenis.destroy();
+      blurTween?.revert();
     };
   }, []);
 
@@ -71,8 +84,6 @@ export default function Home() {
       <Navbar />
 
       {/* bottom blur — fixed to viewport, fades when footer arrives */}
-      <div ref={blurWrapRef} className="bottom-blur" />
-
       {/* scrollable sections */}
       <div className="relative z-10">
         <Hero />

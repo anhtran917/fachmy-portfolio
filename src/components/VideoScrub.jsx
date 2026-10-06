@@ -31,6 +31,8 @@ export default function VideoScrub() {
     let vel        = 0;
     let frozenSnap = null;
     let activeEl   = fwd;
+    let processedAt = 0;
+    let warmupTimer = null;
 
     const FREEZE_VEL = 5;
     const PLAY_VEL   = 90;
@@ -107,6 +109,10 @@ export default function VideoScrub() {
     const frame = (now) => {
       raf = requestAnimationFrame(frame);
       if (!duration) return;
+      // Seeking decoded video on every display refresh can starve scroll and
+      // layout work. 45 updates per second remains visually smooth.
+      if (now - processedAt < 22) return;
+      processedAt = now;
 
       const dt      = Math.max((now - prevT) / 1000, 0.001);
       prevT         = now;
@@ -185,6 +191,20 @@ export default function VideoScrub() {
     fwd.addEventListener("ended", onFwdEnded);
     rev.addEventListener("ended", onRevEnded);
 
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        if (raf !== null) cancelAnimationFrame(raf);
+        raf = null;
+        fwd.pause();
+        rev.pause();
+      } else if (duration && raf === null) {
+        prevY = window.scrollY;
+        prevT = performance.now();
+        raf = requestAnimationFrame(frame);
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
     const setup = () => {
       duration = fwd.duration;
       fwd.currentTime = 0;
@@ -192,7 +212,7 @@ export default function VideoScrub() {
       raf = requestAnimationFrame(frame);
 
       // Delay preloading the reverse video to prioritize initial page load performance
-      setTimeout(() => {
+      warmupTimer = window.setTimeout(() => {
         rev.play().then(() => { rev.pause(); rev.currentTime = duration; }).catch(() => {});
       }, 3000);
     };
@@ -201,8 +221,12 @@ export default function VideoScrub() {
     else fwd.addEventListener("loadedmetadata", setup, { once: true });
 
     return () => {
-      cancelAnimationFrame(raf);
+      if (raf !== null) cancelAnimationFrame(raf);
+      if (warmupTimer !== null) clearTimeout(warmupTimer);
+      window.removeEventListener("load", calcVideoEnd);
       window.removeEventListener("resize", onResize);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      fwd.removeEventListener("loadedmetadata", setup);
       fwd.removeEventListener("seeked", flushFwd);
       rev.removeEventListener("seeked", flushRev);
       fwd.removeEventListener("ended", onFwdEnded);
@@ -225,12 +249,20 @@ export default function VideoScrub() {
 
     const TRANSITION_ZONE = 0.35; // fraction of section height used for transition
 
+    let sectionMetrics = [];
+    const measure = () => {
+      sectionMetrics = SECTION_IMAGES.map((section) => {
+        const el = section.id ? document.getElementById(section.id) : null;
+        return el ? { top: el.offsetTop, height: el.offsetHeight } : null;
+      });
+    };
+
     const getIndex = () => {
       const scrollY = window.scrollY;
       const vh = window.innerHeight;
       for (let i = SECTION_IMAGES.length - 1; i >= 1; i--) {
-        const el = document.getElementById(SECTION_IMAGES[i].id);
-        if (el && scrollY + vh * 0.5 >= el.offsetTop) return i;
+        const metric = sectionMetrics[i];
+        if (metric && scrollY + vh * 0.5 >= metric.top) return i;
       }
       return 0;
     };
@@ -239,10 +271,10 @@ export default function VideoScrub() {
       // How far into the NEXT section's transition zone are we?
       const nextIdx = idx + 1;
       if (nextIdx >= SECTION_IMAGES.length) return 0;
-      const nextEl = document.getElementById(SECTION_IMAGES[nextIdx].id);
-      if (!nextEl) return 0;
-      const sectionTop = nextEl.offsetTop;
-      const zone = nextEl.offsetHeight * TRANSITION_ZONE;
+      const nextMetric = sectionMetrics[nextIdx];
+      if (!nextMetric) return 0;
+      const sectionTop = nextMetric.top;
+      const zone = nextMetric.height * TRANSITION_ZONE;
       const scrollY = window.scrollY;
       const vh = window.innerHeight;
       const rel = (scrollY + vh * 0.5) - (sectionTop - zone);
@@ -251,10 +283,10 @@ export default function VideoScrub() {
 
     let rafId = null;
     let lastIdx = 0;
-    let lastProg = 0;
+    let lastProg = -1;
 
     const frame = () => {
-      rafId = requestAnimationFrame(frame);
+      rafId = null;
       const idx  = getIndex();
       const prog = getProgress(idx); // 0→1 as next section approaches
 
@@ -301,8 +333,26 @@ export default function VideoScrub() {
       });
     };
 
-    rafId = requestAnimationFrame(frame);
-    return () => cancelAnimationFrame(rafId);
+    const scheduleFrame = () => {
+      if (rafId === null) rafId = requestAnimationFrame(frame);
+    };
+    const onResize = () => {
+      measure();
+      scheduleFrame();
+    };
+
+    measure();
+    scheduleFrame();
+    window.addEventListener("scroll", scheduleFrame, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
+    window.addEventListener("load", onResize, { once: true });
+
+    return () => {
+      if (rafId !== null) cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", scheduleFrame);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("load", onResize);
+    };
   }, [isMobile, mounted]);
 
   // Never render on server — eliminates SSR/client hydration mismatch

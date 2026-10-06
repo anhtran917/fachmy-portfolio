@@ -134,7 +134,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <TrackVisit />
-        <div className="bottom-blur" aria-hidden="true" />
+        <div id="site-bottom-blur" className="bottom-blur" aria-hidden="true" />
         {children}
         <Analytics />
         <NewsletterPopup />

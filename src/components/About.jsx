@@ -12,12 +12,13 @@ export default function About({ standalone = false }) {
   const ref = useRef(null);
 
   useEffect(() => {
+    let refreshTimer;
     const ctx = gsap.context(() => {
       if (standalone) {
         gsap.from(".about-label", { y: 25, opacity: 0, duration: 0.6, delay: 0.4 });
         gsap.from(".about-h", { y: 70, opacity: 0, duration: 0.9, ease: "power4.out", delay: 0.6 });
         gsap.from(".about-p", { y: 40, opacity: 0, duration: 0.7, delay: 0.8 });
-        gsap.from(".about-skill", { x: -20, opacity: 0, stagger: 0.08, duration: 0.5, delay: 1.0 });
+        gsap.from(".about-skill", { x: -20, opacity: 0, stagger: { amount: 0.45 }, duration: 0.4, delay: 1.0 });
         gsap.from(".about-img", { scale: 0.9, opacity: 0, duration: 1.2, ease: "power3.out", delay: 0.8 });
         return;
       }
@@ -34,7 +35,7 @@ export default function About({ standalone = false }) {
       tl.from(".about-label", { y: 14, opacity: 0, duration: 0.3, ease: "power3.out" })
         .from(".about-h", { y: 35, opacity: 0, duration: 0.4, ease: "power4.out" }, 0.05)
         .from(".about-p", { y: 20, opacity: 0, duration: 0.35, ease: "power3.out" }, 0.15)
-        .from(".about-skill", { x: -10, opacity: 0, stagger: 0.03, duration: 0.25, ease: "power2.out" }, 0.22);
+        .from(".about-skill", { x: -10, opacity: 0, stagger: { amount: 0.35 }, duration: 0.22, ease: "power2.out" }, 0.22);
 
       gsap.to(ref.current, {
         scrollTrigger: {
@@ -47,9 +48,12 @@ export default function About({ standalone = false }) {
         y: -45,
       });
 
-      setTimeout(() => ScrollTrigger.refresh(), 300);
+      refreshTimer = window.setTimeout(() => ScrollTrigger.refresh(), 300);
     }, ref);
-    return () => ctx.revert();
+    return () => {
+      if (refreshTimer) clearTimeout(refreshTimer);
+      ctx.revert();
+    };
   }, [standalone]);
 
   return (

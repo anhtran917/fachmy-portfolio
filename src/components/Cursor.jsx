@@ -21,40 +21,50 @@ export default function Cursor() {
     let scale = 1;
     let targetScale = 1;
     let raf = null;
+    const interactiveNodes = new Set();
 
-    const onMove = (e) => { mx = e.clientX; my = e.clientY; };
-    const onEnter = () => { targetScale = 2.6; };
-    const onLeave = () => { targetScale = 1; };
-
-    window.addEventListener("mousemove", onMove, { passive: true });
-    document.querySelectorAll("a, button").forEach((node) => {
+    const requestTick = () => {
+      if (raf === null) raf = requestAnimationFrame(frame);
+    };
+    const onMove = (e) => { mx = e.clientX; my = e.clientY; requestTick(); };
+    const onEnter = () => { targetScale = 2.6; requestTick(); };
+    const onLeave = () => { targetScale = 1; requestTick(); };
+    const attach = (node) => {
+      if (interactiveNodes.has(node)) return;
+      interactiveNodes.add(node);
       node.addEventListener("mouseenter", onEnter);
       node.addEventListener("mouseleave", onLeave);
-    });
+    };
+
+    window.addEventListener("mousemove", onMove, { passive: true });
+    document.querySelectorAll("a, button").forEach(attach);
 
     const observer = new MutationObserver(() => {
-      document.querySelectorAll("a:not([data-cur]), button:not([data-cur])").forEach((node) => {
-        node.setAttribute("data-cur", "1");
-        node.addEventListener("mouseenter", onEnter);
-        node.addEventListener("mouseleave", onLeave);
-      });
+      document.querySelectorAll("a, button").forEach(attach);
     });
     observer.observe(document.body, { childList: true, subtree: true });
 
     const frame = () => {
-      raf = requestAnimationFrame(frame);
+      raf = null;
       cx += (mx - cx) * 0.11;
       cy += (my - cy) * 0.11;
       scale += (targetScale - scale) * 0.10;
       el.style.transform =
         `translate(${cx}px,${cy}px) translate(-50%,-50%) scale(${scale})`;
+      if (Math.abs(mx - cx) > 0.1 || Math.abs(my - cy) > 0.1 || Math.abs(targetScale - scale) > 0.01) {
+        requestTick();
+      }
     };
-    raf = requestAnimationFrame(frame);
+    requestTick();
 
     return () => {
-      cancelAnimationFrame(raf);
+      if (raf !== null) cancelAnimationFrame(raf);
       observer.disconnect();
       window.removeEventListener("mousemove", onMove);
+      interactiveNodes.forEach((node) => {
+        node.removeEventListener("mouseenter", onEnter);
+        node.removeEventListener("mouseleave", onLeave);
+      });
     };
   }, [isTouch]);
 
