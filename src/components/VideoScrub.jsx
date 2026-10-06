@@ -38,19 +38,12 @@ export default function VideoScrub() {
     const PLAY_VEL   = 90;
     const EDGE       = 0.12;
 
-    let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    let videoEndScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
 
-    // video completes when contact section top reaches the viewport centre
-    let videoEndScroll = maxScroll;
+    // Keep the video mapped to the full scrollable page.
     const calcVideoEnd = () => {
-      const contact = document.getElementById("contact-section");
-      if (contact) {
-        // End video at contact section midpoint — uses full Work→Contact gap for smooth playback
-        videoEndScroll = Math.max(1, contact.offsetTop + contact.offsetHeight * 0.5 - window.innerHeight * 0.5);
-      } else {
-        videoEndScroll = document.documentElement.scrollHeight - window.innerHeight;
-      }
-      maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      // The complete range lets upward scrolling reverse immediately at the bottom.
+      videoEndScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     };
     calcVideoEnd();
     // recalc after fonts/images load
@@ -140,10 +133,15 @@ export default function VideoScrub() {
       if (absVel < FREEZE_VEL || atStart) {
         if (!fwd.paused) fwd.pause();
         if (!rev.paused) rev.pause();
-        show(fwd);
         if (frozenSnap === null) {
           frozenSnap = atStart ? 0 : tgt;
-          seekFwd(frozenSnap);
+          if (activeEl === rev && !atStart) {
+            show(rev);
+            seekRev(duration - frozenSnap, true);
+          } else {
+            show(fwd);
+            seekFwd(frozenSnap);
+          }
         }
         return;
       }
@@ -297,7 +295,8 @@ export default function VideoScrub() {
       const layers = mobileLayersRef.current;
       if (!layers.length) return;
 
-      // Current section image: sits at 0, slides up as next section comes in
+      // Down: current exits through the top and next enters from the bottom.
+      // Up: the exact same motion reverses, so the earlier image enters from the top.
       const curLayer = layers[idx];
       const nxtLayer = layers[idx + 1];
 
@@ -314,7 +313,7 @@ export default function VideoScrub() {
       layers.forEach((l, i) => {
         if (!l) return;
         if (i === idx) {
-          l.style.transform = `translateY(${-(prog * 8)}%)`;
+          l.style.transform = `translateY(${-(prog * 100)}%)`;
           l.style.opacity   = `${1 - prog * 0.6}`;
           l.style.zIndex    = '1';
         } else if (i === idx + 1 && nxtLayer) {
@@ -322,7 +321,7 @@ export default function VideoScrub() {
           l.style.opacity   = `${0.4 + prog * 0.6}`;
           l.style.zIndex    = '2';
         } else if (i < idx) {
-          l.style.transform = 'translateY(-8%)';
+          l.style.transform = 'translateY(-100%)';
           l.style.opacity   = '0';
           l.style.zIndex    = '0';
         } else {
